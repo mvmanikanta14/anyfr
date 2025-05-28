@@ -1,0 +1,185 @@
+{
+  "title": "31.15 Quantitative and Value particulars of Stocks and Turnover",
+  "years": {
+    "2023-24": {
+      "Lint": {
+        "Opening Stock": {
+          "Kgs": "1,591,567",
+          "Amount (Rs. in Lakhs)": "10,046,257"
+        },
+        "Purchases (less returns)": {
+          "Kgs": null,
+          "Amount (Rs. in Lakhs)": "20,197.29"
+        },
+        "Production (incl. WIP)": {
+          "Kgs": "11,637,824",
+          "Amount (Rs. in Lakhs)": "23,681.83"
+        },
+        "Consumed (incl. WIP)": {
+          "Kgs": "9,586,469",
+          "Amount (Rs. in Lakhs)": "25.51"
+        },
+        "Sales": {
+          "Kgs": "12,500",
+          "Amount (Rs. in Lakhs)": "50,540"
+        },
+        "Closing Stock": {
+          "Kgs": "2,038,855",
+          "Amount (Rs. in Lakhs)": "3,474.10"
+        }
+      },
+      "Work in Progress": {
+        "Opening Stock": {
+          "Kgs": "102,500",
+          "Amount (Rs. in Lakhs)": "179.38"
+        },
+        "Closing Stock": {
+          "Kgs": "196,000",
+          "Amount (Rs. in Lakhs)": "463.59"
+        }
+      },
+      "Yarn": {
+        "Opening Stock": {
+          "Kgs": "398,867",
+          "Amount (Rs. in Lakhs)": "1,237.03"
+        },
+        "Purchases": {
+          "Kgs": "13,545,615",
+          "Amount (Rs. in Lakhs)": "38,459.99"
+        },
+        "Production": {
+          "Kgs": "7,819,821",
+          "Amount (Rs. in Lakhs)": null
+        },
+        "Sales": {
+          "Kgs": "21,764,303",
+          "Amount (Rs. in Lakhs)": "60,759.24"
+        },
+        "Closing Stock (inclg. stock in transit)": {
+          "Kgs": "481,919",
+          "Amount (Rs. in Lakhs)": "1,355.57"
+        },
+        "Stock in Transit (Manufactured)": {
+          "Kgs": "85,368",
+          "Amount (Rs. in Lakhs)": "260.47"
+        },
+        "Stock in Transit (Traded)": {
+          "Kgs": "166,698",
+          "Amount (Rs. in Lakhs)": "407.05"
+        }
+      },
+      "Saleable Waste": {
+        "Opening Stock": {
+          "Kgs": "384,562",
+          "Amount (Rs. in Lakhs)": "152.25"
+        },
+        "Purchases": {
+          "Kgs": "6,996",
+          "Amount (Rs. in Lakhs)": "7.80"
+        },
+        "Production": {
+          "Kgs": "1,493,536",
+          "Amount (Rs. in Lakhs)": null
+        },
+        "Sales": {
+          "Kgs": "1,885,094",
+          "Amount (Rs. in Lakhs)": "160.05"
+        },
+        "Closing Stock": {
+          "Kgs": "41,900",
+          "Amount (Rs. in Lakhs)": "43.22"
+        }
+      }
+    },
+    "2022-23": {
+      "Lint": {
+        "Opening Stock": {
+          "Kgs": "2,007,566",
+          "Amount (Rs. in Lakhs)": "12,331.26"
+        },
+        "Purchases (less returns)": {
+          "Kgs": "6,545,800",
+          "Amount (Rs. in Lakhs)": "4,297.29"
+        },
+        "Production (incl. WIP)": {
+          "Kgs": "8,553,366",
+          "Amount (Rs. in Lakhs)": "16,628.54"
+        },
+        "Consumed (incl. WIP)": {
+          "Kgs": "6,911,260",
+          "Amount (Rs. in Lakhs)": "142.62"
+        },
+        "Sales": {
+          "Kgs": "50,540",
+          "Amount (Rs. in Lakhs)": null
+        },
+        "Closing Stock": {
+          "Kgs": "1,591,567",
+          "Amount (Rs. in Lakhs)": "2,822.63"
+        }
+      },
+      "Work in Progress": {
+        "Opening Stock": {
+          "Kgs": "29,950",
+          "Amount (Rs. in Lakhs)": "50.79"
+        },
+        "Closing Stock": {
+          "Kgs": "102,500",
+          "Amount (Rs. in Lakhs)": "179.38"
+        }
+      },
+      "Yarn": {
+        "Opening Stock": {
+          "Kgs": "232,434",
+          "Amount (Rs. in Lakhs)": "622.94"
+        },
+        "Purchases": {
+          "Kgs": "4,523,662",
+          "Amount (Rs. in Lakhs)": "12,098.67"
+        },
+        "Production": {
+          "Kgs": "5,431,115",
+          "Amount (Rs. in Lakhs)": null
+        },
+        "Sales": {
+          "Kgs": "10,187,211",
+          "Amount (Rs. in Lakhs)": "28,379.33"
+        },
+        "Closing Stock (inclg. stock in transit)": {
+          "Kgs": "398,867",
+          "Amount (Rs. in Lakhs)": "1,002.05"
+        },
+        "Stock in Transit (Manufactured)": {
+          "Kgs": "83,462",
+          "Amount (Rs. in Lakhs)": "196.88"
+        },
+        "Stock in Transit (Traded)": {
+          "Kgs": "144,698",
+          "Amount (Rs. in Lakhs)": "369.77"
+        }
+      },
+      "Saleable Waste": {
+        "Opening Stock": {
+          "Kgs": "554,739",
+          "Amount (Rs. in Lakhs)": "219.12"
+        },
+        "Purchases": {
+          "Kgs": "66,882",
+          "Amount (Rs. in Lakhs)": "59.98"
+        },
+        "Production": {
+          "Kgs": "1,182,552",
+          "Amount (Rs. in Lakhs)": null
+        },
+        "Sales": {
+          "Kgs": "1,804,172",
+          "Amount (Rs. in Lakhs)": "279.11"
+        },
+        "Closing Stock": {
+          "Kgs": "384,562",
+          "Amount (Rs. in Lakhs)": "123.33"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+const { DataTypes } = require('sequelize');
+const { sequelize } = require('../config/database'); // Import Sequelize instance
+
+const MasterTypeOfShareholders = sequelize.define('master_type_of_shareholders', {
+    id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true
+    },
+    type_of_shareholder_name: {
+        type: DataTypes.STRING(255),
+        allowNull: false,
+        unique: true
+    },
+    is_active: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: true
+    },
+    created_by: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    created_on: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW
+    }
+}, {
+    timestamps: false, // Since created_on is explicitly defined
+    tableName: 'master_type_of_shareholders'
+});
+
+module.exports = MasterTypeOfShareholders;

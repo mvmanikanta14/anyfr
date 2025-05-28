@@ -1,0 +1,125 @@
+const express = require('express');
+const router = express.Router();
+const MasterTypeOfShareholders = require('../models/MasterTypeOfShareholders');
+const Entities = require('../models/Entities');
+const authenticateToken = require('../middlewares/authMiddleware');
+
+// 🔹 CREATE Type of Shareholder
+router.post('/type-of-shareholder', authenticateToken, async (req, res) => {
+    try {
+        const { type_of_shareholder_name } = req.body;
+        if (!type_of_shareholder_name) {
+            return res.status(400).json({ error: 'Type of shareholder name is required' });
+        }
+
+        const created_by = req.user.id;
+        const newShareholderType = await MasterTypeOfShareholders.create({ type_of_shareholder_name, created_by });
+
+        res.status(201).json({ message: 'Type of shareholder created', data: newShareholderType });
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// 🔹 EDIT Type of Shareholder
+router.put('/type-of-shareholder/:id', authenticateToken, async (req, res) => {
+    try {
+        const { type_of_shareholder_name, is_active } = req.body;
+        const [updated] = await MasterTypeOfShareholders.update(
+            { type_of_shareholder_name, is_active },
+            { where: { id: req.params.id } }
+        );
+
+        if (!updated) return res.status(404).json({ message: 'Type of shareholder not found' });
+        res.json({ message: 'Type of shareholder updated' });
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// 🔹 DELETE Type of Shareholder (Soft Delete)
+router.delete('/type-of-shareholder/:id', authenticateToken, async (req, res) => {
+    try {
+        const [deleted] = await MasterTypeOfShareholders.update(
+            { is_active: false },
+            { where: { id: req.params.id } }
+        );
+
+        if (!deleted) return res.status(404).json({ message: 'Type of shareholder not found' });
+        res.json({ message: 'Type of shareholder deleted (soft delete)' });
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// 🔹 VIEW Type of Shareholder by ID
+router.get('/type-of-shareholder/:id', authenticateToken, async (req, res) => {
+    try {
+        const shareholderType = await MasterTypeOfShareholders.findByPk(req.params.id);
+        if (!shareholderType) return res.status(404).json({ message: 'Type of shareholder not found' });
+        res.json(shareholderType);
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// 🔹 CREATE Entity
+router.post('/entity', authenticateToken, async (req, res) => {
+    try {
+        const { entity_name, entity_pan } = req.body;
+        if (!entity_name || !entity_pan) {
+            return res.status(400).json({ error: 'Entity name and PAN are required' });
+        }
+
+        const created_by = req.user.id;
+        const newEntity = await Entities.create({ entity_name, entity_pan, created_by });
+
+        res.status(201).json({ message: 'Entity created', data: newEntity });
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// 🔹 EDIT Entity
+router.put('/entity/:id', authenticateToken, async (req, res) => {
+    try {
+        const { entity_name, entity_pan, is_active } = req.body;
+        const [updated] = await Entities.update(
+            { entity_name, entity_pan, is_active },
+            { where: { id: req.params.id } }
+        );
+
+        if (!updated) return res.status(404).json({ message: 'Entity not found' });
+        res.json({ message: 'Entity updated' });
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// 🔹 DELETE Entity (Soft Delete)
+router.delete('/entity/:id', authenticateToken, async (req, res) => {
+    try {
+        const [deleted] = await Entities.update(
+            { is_active: false },
+            { where: { id: req.params.id } }
+        );
+
+        if (!deleted) return res.status(404).json({ message: 'Entity not found' });
+        res.json({ message: 'Entity deleted (soft delete)' });
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// 🔹 VIEW Entity by ID
+router.get('/entity/:id', authenticateToken, async (req, res) => {
+    try {
+        const entity = await Entities.findByPk(req.params.id);
+        if (!entity) return res.status(404).json({ message: 'Entity not found' });
+        res.json(entity);
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+module.exports = router;

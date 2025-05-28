@@ -1,0 +1,75 @@
+const express = require('express');
+const router = express.Router();
+const MasterTypeOfShares = require('../models/MasterTypeOfShares');
+const authenticateToken = require('../middlewares/authMiddleware'); // Authentication middleware
+
+// 🔹 GET: Fetch all types of shares
+router.get('/', authenticateToken, async (req, res) => {
+    try {
+        const shares = await MasterTypeOfShares.findAll({ where: { is_active: true } });
+        res.json(shares);
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// 🔹 GET: Fetch a single type of share by ID
+router.get('/:id', authenticateToken, async (req, res) => {
+    try {
+        const share = await MasterTypeOfShares.findByPk(req.params.id);
+        if (!share) return res.status(404).json({ message: 'Type of share not found' });
+        res.json(share);
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// 🔹 POST: Create a new type of share
+router.post('/', authenticateToken, async (req, res) => {
+    try {
+        const { type_of_share_name } = req.body;
+        if (!type_of_share_name) {
+            return res.status(400).json({ error: 'Type of share name is required' });
+        }
+
+        const userId = req.user.id; // Assuming user ID is extracted from JWT token
+        const newShare = await MasterTypeOfShares.create({ type_of_share_name,created_by: userId });
+
+        res.status(201).json({ message: 'Type of share created', data: newShare });
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// 🔹 PUT: Update an existing type of share by ID
+router.put('/:id', authenticateToken, async (req, res) => {
+    try {
+        const { type_of_share_name, is_active } = req.body;
+        const [updated] = await MasterTypeOfShares.update(
+            { type_of_share_name, is_active },
+            { where: { id: req.params.id } }
+        );
+
+        if (!updated) return res.status(404).json({ message: 'Type of share not found' });
+        res.json({ message: 'Type of share updated' });
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// 🔹 DELETE: Soft delete (set is_active = false) a type of share by ID
+router.delete('/:id', authenticateToken, async (req, res) => {
+    try {
+        const [deleted] = await MasterTypeOfShares.update(
+            { is_active: false },
+            { where: { id: req.params.id } }
+        );
+
+        if (!deleted) return res.status(404).json({ message: 'Type of share not found' });
+        res.json({ message: 'Type of share deleted (soft delete)' });
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+module.exports = router;

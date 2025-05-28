@@ -1,0 +1,42 @@
+{
+    "Note": "Trade Payables",
+    "Date": "31-Mar-2024",
+    "Amounts_in_Lakhs": {
+      "Total": {
+        "Current_Year": 109.88,
+        "Previous_Year": 266.72
+      },
+      "Outstanding_Payables": [
+        {
+          "Category": "MSME",
+          "Less_than_1_year": 23.17,
+          "1-2_years": 5.80,
+          "2-3_years": 0.05,
+          "More_than_3_years": 31.64,
+          "Total": 60.66
+        },
+        {
+          "Category": "Disputed Dues - MSME",
+          "Less_than_1_year": 2.33,
+          "1-2_years": 0.00,
+          "2-3_years": 0.00,
+          "More_than_3_years": 0.00,
+          "Total": 2.33
+        },
+        {
+          "Category": "Disputed Dues - Others",
+          "Less_than_1_year": 31.64,
+          "1-2_years": 5.80,
+          "2-3_years": 0.05,
+          "More_than_3_years": 31.64,
+          "Total": 69.13
+        }
+      ]
+    },
+    "Other_Current_Liabilities": {
+      "Advance_Received_from_Customers": 53.17,
+      "Creditors_for_Expenses": 295.24,
+      "Creditors_for_Capital_Goods": 0.95
+    }
+  }
+  

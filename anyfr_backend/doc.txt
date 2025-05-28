@@ -1,0 +1,8 @@
+
+
+// Log the final query with values //for check update query
+const finalQuery = updateQuery.replace(/\$(\d+)/g, (_, index) => {
+    return `'${replacements[parseInt(index, 10) - 1]}'`; // Replace placeholders with actual values
+});
+
+console.log("Final SQL Query:", finalQuery);
