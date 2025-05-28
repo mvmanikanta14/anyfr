@@ -1,0 +1,119 @@
+body.login-page {
+	background-color: #f7f9fb;
+	font-size: 14px;
+}
+
+
+
+.login-page .brand {
+	width: 90px;
+	height: 90px;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: 40px auto;
+	box-shadow: 0 4px 8px rgba(0,0,0,.05);
+	position: relative;
+}
+
+.login-page .brand img {
+	width: 100%;
+}
+
+.login-page .card-wrapper {
+	width: 400px;
+}
+
+.login-page .card {
+	border-color: transparent;
+	box-shadow: 0 4px 8px rgba(0,0,0,.05);
+}
+
+.login-page .card.fat {
+	padding: 10px;
+	margin-top: 100px;
+	background-color: #f0f0f0;
+}
+
+.login-page .card .card-title {
+	margin-bottom: 30px;
+}
+
+.login-page .form-control {
+	border-width: 2.3px;
+}
+
+.login-page .form-group label {
+	width: 100%;
+}
+
+.login-page .btn.btn-block {
+	padding: 12px 10px;
+}
+
+.login-page .footer {
+	margin: 40px 0;
+	color: #888;
+	text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+	.login-page .card-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.login-page .card.fat {
+		padding: 0;
+	}
+
+	.login-page .card.fat .card-body {
+		padding: 15px;
+	}
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.client-form{
+  padding: 20px;
+  margin: 30px 0;
+  box-shadow: 1px 1px 12px #ccc;
+}

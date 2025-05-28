@@ -1,0 +1,157 @@
+
+
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Modal, Button, Form } from "react-bootstrap";
+import swal from "sweetalert";
+import axios from "axios";
+import { IconHome, IconPencil, IconTrash, IconRefresh } from '@tabler/icons-react';
+import { useForm } from "react-hook-form";
+
+// import { useAuth } from '../../../context/AuthProvider';
+import '../../../css/custom_style.css';
+import 'jspdf-autotable';
+
+
+
+
+const Masters = () => {
+
+
+
+    return (
+
+        <div className="">
+            <div className=" ">
+
+                <div className="bread_crumb">
+                    <div className=" ">
+                        <h3 className="header-title"> Masters List </h3>
+                    </div>
+
+                    <div>
+                        <ul>
+                            <li className="active"> <Link to={""}> <IconHome /> </Link> </li>
+                            <li> Masters List  </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="card">
+                    <div className="card-body">
+
+
+
+                        <div className="table-responsive">
+                            <table className="table table-striped table-bordered table-hover table_custom_1">
+                                <thead>
+                                    <tr className="border-btm-0">
+                                        <th width="5%">S.No</th>
+                                        <th width=""> Page Name </th>
+                                    </tr>
+
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>  <Link to={"/fssCoreMaster"}>Fss Core Master </Link></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td> <Link to={"/frameworkMaster"}>Framework Master</Link></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td> <Link to={"/fssLineMaster"}>Fss Line Master</Link></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>4</td>
+                                        <td> <Link to={"/fssMasterPartyTypes"}>Fss Party Types</Link></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>5</td>
+                                        <td> <Link to={"/fssMasterRelationshipTypes"}>Fss Relationship Types</Link></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>6</td>
+                                        <td> <Link to={"/fssMasterUnitTypes"}>Fss Unit Types</Link></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>7</td>
+                                        <td> <Link to={"/fssMasterUnitsofMeasurement"}>Unit of Measurements</Link></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>8</td>
+                                        <td> <Link to={"/fssMasterVoucherTypes"}>Fss Voucher Types</Link></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>9</td>
+                                        <td> <Link to={"/fssEntityLineMaster"}>Fss Entity Line Master</Link></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td> <Link to={"/fssParamentityGls"}>Fss Param Entity GLs</Link></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>11</td>
+                                        <td> <Link to={"/fssParamentityParties"}>Fss Param Entity Parties</Link></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>12</td>
+                                        <td> <Link to={"/fssParamentityPartyRelations"}>Fss Param Entity Party Relations</Link></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>13</td>
+                                        <td> <Link to={"/FssParamEntitiesProducts"}>Fss Param Entities Products</Link></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>14</td>
+                                        <td> <Link to={"/fssParamEntityVouchers"}>Fss Param Entity Voucher</Link></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>15</td>
+                                        <td> <Link to={"/fssParamEntityTransactionNature"}>Fss Param Entity Transaction Nature</Link></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>16</td>
+                                        <td> <Link to={"/fssParamEntityLocations"}>Fss Param Entity Locations</Link></td>
+                                    </tr>
+
+                                </tbody>
+
+
+
+                            </table>
+                        </div>
+
+
+                        <div className="d-flex justify-content-between">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    );
+};
+
+export default Masters;
+
+
+

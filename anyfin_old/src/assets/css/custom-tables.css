@@ -1,0 +1,206 @@
+
+
+.company-details { text-align: center; }
+.company-title { margin-bottom: 5px; }
+.company-desc { margin-bottom: 5px; }
+.subheading-label { text-transform: capitalize;}
+
+.amounts-label { text-align: right; font-weight: 600; margin-bottom: 5px; font-size: 14px; font-weight: 500;}
+
+
+
+
+
+.regular-bold {
+    font-weight: 600;
+}
+
+.total-bold {
+    font-weight: 600;
+}
+
+.sub-borders-both td {   
+    border-top: 2px solid #999 !important;
+    border-bottom: 2px solid #999 !important
+}
+
+
+.sub-borders-both td:first-child {  
+    border-top: 0px solid #999;
+    border-bottom: 0px solid #999;
+}
+       
+
+.sub-borders-top td {   
+    border-top: 2px solid #999 !important;
+}
+
+
+.sub-borders-top td:first-child {  
+   border-top: 0px solid #999;
+   border-bottom: 0px solid #999;
+}
+
+
+.highlighted {
+    color: rgb(27, 157, 20) !important;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.highlighted:hover {
+    background-color: rgb(0, 255, 38) !important;
+}
+
+
+
+
+.sub-borders-bottom td {   
+     border-bottom: 2px solid #999 !important;
+}
+
+
+.sub-borders-bottom td:first-child {  
+    border-top: 0px solid #999;
+    border-bottom: 0px solid #999;
+}
+      
+
+
+
+
+/* Start table-outerlines-col-lines totals-subtotals */
+
+
+.table-outerlines-col-lines   { 
+    border: 1px solid #999 ; 
+    
+}
+
+.table-outerlines-col-lines thead tr th   { 
+    border-bottom: 1px solid #999 ; 
+    border-left: 1px solid #999;
+    font-weight: 600;
+ }
+
+
+.table-outerlines-col-lines tbody tr td  {  
+    border-bottom: 0px solid #999 ; 
+    border-left: 1px solid #999;
+}
+
+
+.table-outerlines-col-lines tbody .totals-bold   {  
+    font-weight: 600;
+}
+
+.table-outerlines-col-lines tbody .regular-bold {
+    font-weight: 600;
+}
+
+
+
+/* End table-outerlines-col-lines totals-subtotals */
+
+
+
+
+
+
+
+
+
+
+/* Start table-outlines hightlight-last-totals */
+
+ 
+
+.table-outlines   { 
+    border: 0px solid #999 ; 
+    
+}
+
+.table-outlines thead tr th   { 
+    border: 1px solid #999 ; 
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.table-outlines thead tr th:first-child   { 
+    border-left: 1px solid #999;
+}
+
+.table-outlines thead tr th:last-child   { 
+    border-right: 1px solid #999;
+}
+
+.table-outlines tbody tr td  {  
+    border-bottom: 0px solid #999 ; 
+    /* border-left: 1px solid #999; */
+}
+
+.hightlight-last-totals .totals td:nth-last-child(-n+2) {
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+    font-weight: 600;
+}
+
+.table-outlines tbody .totals-bold   {  
+    font-weight: 600;
+}
+
+.table-outlines tbody .regular-bold {
+    font-weight: 600;
+}
+
+
+/* End table-outlines hightlight-last-totals */
+
+
+
+
+
+
+
+
+/* Start table-regular */
+
+
+
+.table-regular   { 
+    border: 1px solid #bdbdbd ; 
+    
+}
+
+.table-regular thead tr th   { 
+    border: 1px solid #bdbdbd ; 
+    font-weight: 600;
+    padding: 5px 10px;
+}
+
+ 
+.table-regular tbody tr td  {  
+    border: 1px solid #bdbdbd ; 
+    font-weight: 400;
+    padding: 5px 10px;
+ }
+
+/* .table-regular tbody tr:nth-child(even) {
+    background-color: #f6ecfe78;
+} */
+
+.hightlight-last-totals .totals td:nth-last-child(-n+2) {
+    border-bottom: 2px solid #999;
+    border-top: 2px solid #999;
+    font-weight: 600;
+}
+
+.table-regular tbody .totals-bold   {  
+    font-weight: 600;
+}
+
+.table-regular tbody .regular-bold {
+    font-weight: 600;
+}
+
+/* End table-outlines hightlight-last-totals */

@@ -1,0 +1,44 @@
+
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff9f0 !important;
+}
+
+
+.logo-text {
+  font-family: "Righteous", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.border-0{border: 0px;}
+
+/* .action-buttons {
+  display: none;
+}
+
+tr:hover .action-buttons {
+  display: block;
+} */
+
+
+.action-buttons {
+  visibility: hidden; 
+  display: flex;
+  gap: 10px;
+  float: right;
+}
+
+tr:hover .action-buttons {
+  visibility: visible;
+}
+
+

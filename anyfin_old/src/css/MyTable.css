@@ -1,0 +1,7 @@
+/* Targeting tbody th and td elements */
+tbody td {
+    padding: 8px 16px;
+    text-align: left;
+    border: 0px solid #ddd;
+  }
+  
